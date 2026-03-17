@@ -152,6 +152,27 @@ function connectDevice(){
     ws.send(JSON.stringify({ command:"connect_device", port }));
 }
 
+function setupDevice(){
+
+    const port = document.getElementById("device-select").value;
+
+    if(!port){
+        alert("Please select a device first.");
+        return;
+    }
+
+    const name = prompt("Enter device name:");
+    if(!name) return;
+
+    if(ws?.readyState !== 1) return;
+
+    ws.send(JSON.stringify({
+        command:"start_setup",
+        port: port,
+        name: name
+    }));
+}
+
 function moveToMiddle(){
     if(ws?.readyState !== 1) return;
     ws.send(JSON.stringify({ command:"move_to_middle" }));
@@ -321,6 +342,7 @@ function createUI(){
         <br><br>
 
         <button id="connect-btn">Connect Device</button>
+        <button id="setup-btn">Setup New Device</button>
 
         <hr>
 
@@ -340,6 +362,7 @@ function createUI(){
 
     document.getElementById("scan-btn").onclick = scanDevices;
     document.getElementById("connect-btn").onclick = connectDevice;
+    document.getElementById("setup-btn").onclick = setupDevice;
     document.getElementById("save-profile-btn").onclick = saveCalibration;
     document.getElementById("center-btn").onclick = moveToMiddle;
 
