@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+controller/profiles/*.json
+.env
