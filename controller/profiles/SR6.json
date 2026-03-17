@@ -1,0 +1,41 @@
+{
+    "name": "SR6",
+    "connection": {
+        "method": "serial",
+        "port": "COM3"
+    },
+    "protocol": "tcode",
+    "mapping": {
+        "stroke": "L0",
+        "surge": "L1",
+        "sway": "L2",
+        "roll": "R1",
+        "pitch": "R2"
+    },
+    "ranges": {
+        "stroke": {
+            "min": 0,
+            "max": 999
+        },
+        "sway": {
+            "min": 0,
+            "max": 999
+        },
+        "surge": {
+            "min": 0,
+            "max": 999
+        },
+        "twist": {
+            "min": 0,
+            "max": 999
+        },
+        "roll": {
+            "min": 0,
+            "max": 999
+        },
+        "pitch": {
+            "min": 0,
+            "max": 999
+        }
+    }
+}

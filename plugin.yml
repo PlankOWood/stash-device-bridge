@@ -1,0 +1,15 @@
+name: Device Bridge
+description: Motion controller integration for Stash
+version: 1.0
+
+ui:
+  javascript:
+    - https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js
+    - deviceBridge.js
+
+  css:
+    - https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css
+
+exec:
+  - start_controller.py
+  - controller/device_setup.py
