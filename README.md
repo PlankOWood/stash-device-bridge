@@ -58,14 +58,19 @@ Tested only using my OSR2 as it is the only device I own that works through USB.
 - Place your .funscript files in the same folder as your video file
 - Make sure filenames match your video and include channel names
 
-### 2. Connect your device
+### 2. Open the app
+
+- Locate the start_stash_with_controller.bat This is the application you need to use now as it opens both stash and your WebSocket. Click on this to open it up.
+  - Feel free to rename this application and move it. But you might need to change (%USERPROFILE%\Desktop\stash-win.exe) within it to model your stash.exe location
+
+### 3. Connect your device
 
 - In the settings/plugins/plugin UI: Click scan Devices.
 - Select the COM port your device is connected to and click connect Device
 - If it's your first time with this device hit Setup New Device. Enter the name you want it called then follow the instructions on assigning the axes.
   - Don't worry if you mess up the axes just go back (you might have to restart) and click setup new device and name it the same it will overwrite it.
 
-### 3. Play a scene
+### 4. Play a scene
 
 - Simply go and play a scene like normal. It should sync the motion and funscripts in real time with the video.
 
